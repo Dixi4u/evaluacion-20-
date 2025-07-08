@@ -1,0 +1,368 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Evaluación 20%",
+    "description": "Documentacion de cruds con swagger",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://virtserver.swaggerhub.com/ricaldone-488/Evaluacion/1.0.0",
+      "description": "SwaggerHub API Auto Mocking"
+    }
+  ],
+  "security": [
+    {
+      "application": [
+        "read",
+        "write"
+      ]
+    }
+  ],
+  "paths": {
+    "/Cliente": {
+      "get": {
+        "tags": [
+          "Cliente"
+        ],
+        "summary": "Select a Cliente",
+        "description": "Manda a llamar los datos de la tabla clientes\r\n",
+        "operationId": "get-Cliente",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Cliente"
+        ],
+        "summary": "Update a Clientes",
+        "description": "se actualizan los datos de clientes",
+        "operationId": "put-Cliente",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Cliente_body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Cliente"
+        ],
+        "summary": "Insert a Cliente",
+        "description": "Se insertan los datos a clientes",
+        "operationId": "post-Cliente",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Cliente_body_1"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Cliente"
+        ],
+        "summary": "Deleate Cliente",
+        "description": "Borra al cliente seleccionado",
+        "operationId": "delete-Cliente",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/Reserva": {
+      "get": {
+        "tags": [
+          "Reserva"
+        ],
+        "summary": "Select a Reserva",
+        "description": "Se manda a llamar los datos de las reservas",
+        "operationId": "get-Resrva",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Reserva"
+        ],
+        "summary": "Update a Reserva",
+        "description": "Se actualizan los datos de la reserva",
+        "operationId": "put-Reserva",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Reserva_body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Reserva"
+        ],
+        "summary": "Insert a Reserva",
+        "description": "Se inserta una nueva reserva",
+        "operationId": "post-Reserva",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Reserva_body_1"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Reserva"
+        ],
+        "summary": "Delete a Reserva",
+        "description": "Se elimina una reserva",
+        "operationId": "delete-Reserva",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {}
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Cliente_body": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "x3t2rh93k9h2q"
+            }
+          },
+          "email": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "yv61i7z8824z8"
+            }
+          },
+          "password": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "nfhr26rtbiwrm"
+            }
+          },
+          "phone": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "y9gvpundfiv76"
+            }
+          },
+          "": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "tk7wahn738oj2"
+            }
+          }
+        }
+      },
+      "Cliente_body_1": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "u4a3nni462r6j"
+            }
+          },
+          "email": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "g6y69ohc7noxo"
+            }
+          },
+          "password": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "p8cd4ysx9d6ui"
+            }
+          },
+          "phone": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "m6tg65qdgsesg"
+            }
+          },
+          "age": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "77s30hxdux243"
+            }
+          }
+        }
+      },
+      "Reserva_body": {
+        "type": "object",
+        "properties": {
+          "clientId": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "hfqqb80eh7w6m"
+            }
+          },
+          "vehicle": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ievgx711y7ffj"
+            }
+          },
+          "service": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "d76d6cdm0ubt8"
+            }
+          },
+          "status": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "yu7nw79s4axjv"
+            }
+          }
+        }
+      },
+      "Reserva_body_1": {
+        "type": "object",
+        "properties": {
+          "clientId": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "yd5qop8i7vlax"
+            }
+          },
+          "vehicle": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "w5fkjl22rvgx2"
+            }
+          },
+          "service": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "a3aod9tetfqvu"
+            }
+          },
+          "status": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "e520b028392pz"
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "application": {
+        "type": "oauth2",
+        "flows": {
+          "clientCredentials": {
+            "tokenUrl": "http://example.com/oauth/token",
+            "scopes": {
+              "write": "allows modifying resources",
+              "read": "allows reading resources"
+            }
+          }
+        }
+      }
+    }
+  }
+}
